@@ -1,3 +1,8 @@
+/**
+ * Scanner 扫描对象，遇到空格表示分割，只能获取前面的数据
+ * 可以获取系统的输入数据并且抓换为对应的类型
+ */
+
 import java.util.Scanner;
 
 public class Main {
