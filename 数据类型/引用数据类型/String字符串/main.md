@@ -170,3 +170,86 @@ public class Test {
     }
 }
 ```
+
+## 拼接字符串
+
+除了可以使用 + 号拼接还可以使用方法函数 concat()
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String a = "你";
+        String b = "好";
+        String c = a.concat(b);
+        System.out.println(c);
+    }
+}
+```
+
+## 寻找字符串中字符的索引
+
+字符串中某个内容的索引位置，返回-1表示查找不到
+
+### indexOf() 方法
+
+返回第一次寻找到的位置
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String data = "你好，我是，java程序";
+
+        int result = data.indexOf("，");  // 返回第一次寻找到的位置
+        System.out.println(result);
+    }
+}
+```
+
+### lastIndexOf() 方法
+
+返回最后一个寻找到的位置
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String data = "你好，我是，java程序";
+
+        int result = data.lastIndexOf("，");  // 返回最后一个寻找到的位置
+        System.out.println(result);
+    }
+}
+```
+
+## 自定义位置截取字符串的内容
+
+字符的位置下标从0开始
+
+### substring() 方法一个参数
+
+返回的是从下标开始以一直到最后的所有内容
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String data = "你好，我是，java程序";
+
+        String result = data.substring(3);
+        System.out.println(result);
+    }
+}
+```
+
+### substring() 方法两个参数
+
+返回的是左闭右开区间的值
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String data = "你好，我是，java程序";
+
+        String result = data.substring(6, 10);
+        System.out.println(result);
+    }
+}
+```
