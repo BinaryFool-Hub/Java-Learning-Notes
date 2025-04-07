@@ -17,11 +17,9 @@ public class Main {
 }
 ```
 
-# 字符串方法
+# 字符串值比较是否相等
 
-## 字符串值比较是否相等
-
-### equals()方法
+## equals()方法
 
 使用字符串的方法`equals()`来获取值是否相等，不会忽略大小写
 
@@ -40,7 +38,7 @@ public class Main {
 }
 ```
 
-### equalsIgnoreCase()方法
+## equalsIgnoreCase()方法
 
 使用字符串的方法`equalsIgnoreCase()`来获取值是否相等，会忽略大小写
 
@@ -59,7 +57,7 @@ public class Main {
 }
 ```
 
-## 字符串的长度读取
+# 字符串的长度读取
 
 使用字符串的方法`length()`来获取字符串的长度
 
@@ -79,7 +77,7 @@ public class Main {
 }
 ```
 
-## 字符串字符的 ASCII 值获取
+# 字符串字符的 ASCII 值获取
 
 使用字符串的方法`charAt()`来获取字符的 ASCII 值
 
@@ -98,7 +96,7 @@ public class Main {
 }
 ```
 
-## 比较两个字符串大小
+# 比较两个字符串大小
 
 - 里面参数都传递被比较的字符串
 - 共同属性
@@ -111,7 +109,7 @@ public class Main {
     - compareToIgnoreCase 不会进行大小写比较（忽略大小写）
     - compareTo 会进行大小比较
 
-### compareTo()方法
+## compareTo()方法
 
 compareTo 会进行大小比较
 
@@ -126,7 +124,7 @@ public class Main1 {
 }
 ```
 
-### compareToIgnoreCase()方法
+## compareToIgnoreCase()方法
 
 compareToIgnoreCase 不会进行大小写比较（忽略大小写）
 
@@ -141,9 +139,9 @@ public class Main1 {
 }
 ```
 
-## 大小写转换
+# 大小写转换
 
-### toLowerCase()方法
+## toLowerCase()方法
 
 全部都转换为小写的字符
 
@@ -157,7 +155,7 @@ public class Test {
 }
 ```
 
-### toUpperCase()方法
+## toUpperCase()方法
 
 全部都转换为大写的字符
 
@@ -171,7 +169,7 @@ public class Test {
 }
 ```
 
-## 拼接字符串
+# 拼接字符串
 
 除了可以使用 + 号拼接还可以使用方法函数 concat()
 
@@ -186,11 +184,11 @@ public class Test {
 }
 ```
 
-## 寻找字符串中字符的索引
+# 寻找字符串中字符的索引
 
 字符串中某个内容的索引位置，返回-1表示查找不到
 
-### indexOf() 方法
+## indexOf() 方法
 
 返回第一次寻找到的位置
 
@@ -205,7 +203,7 @@ public class Test {
 }
 ```
 
-### lastIndexOf() 方法
+## lastIndexOf() 方法
 
 返回最后一个寻找到的位置
 
@@ -220,11 +218,11 @@ public class Test {
 }
 ```
 
-## 自定义位置截取字符串的内容
+# 自定义位置截取字符串的内容
 
 字符的位置下标从0开始
 
-### substring() 方法一个参数
+## substring() 方法一个参数
 
 返回的是从下标开始以一直到最后的所有内容
 
@@ -239,7 +237,7 @@ public class Test {
 }
 ```
 
-### substring() 方法两个参数
+## substring() 方法两个参数
 
 返回的是左闭右开区间的值
 
@@ -250,6 +248,57 @@ public class Test {
 
         String result = data.substring(6, 10);
         System.out.println(result);
+    }
+}
+```
+
+# 去除首位空字符
+
+strip() 方法可以正确的去除Unicode编码，但是trim()可能不行
+
+## strip()方法(推荐)
+
+能正确去除所有空白
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String str = "  \u2000你好\u3000  "; // 包含全角空格和 Unicode 空白字符
+        System.out.println(str.strip().length());   // 能正确去除所有空白
+    }
+}
+```
+
+## trim()方法
+
+可能无法完全去除
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String str = "  \u2000你好\u3000  "; // 包含全角空格和 Unicode 空白字符
+        System.out.println(str.trim().length());   // 可能无法完全去除
+    }
+}
+```
+
+# 使用特定字符来分裂字符串
+
+使用split()方法来分裂字符串，返回数组，和python一样        
+里面第一个值传入分裂的索引，第二个值是进行几次分裂
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String split_data = "你好，你是谁，你是Java，你好，我是谁，我是Java";
+
+        // 第一个值是分裂的索引，第二个值是进行几次分裂
+        String[] split_over = split_data.split("，", 2);
+        System.out.println(split_over.length);
+
+        for (String value : split_over) {
+            System.out.println(value);
+        }
     }
 }
 ```
