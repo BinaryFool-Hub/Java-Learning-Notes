@@ -7,14 +7,14 @@ public class Main {
             第三个是运行完成一次循环需要做的参数，可以多个语句
         */
 
-        // 单个语句
+        // 一个单位语句
         for (int i = 0; i < 6; i++) {
             System.out.println(i);
         }
 
         System.out.println("--------------------");
 
-        // 多个语句
+        // 多个单位语句
         for (int i = 0, j = 0; i < 6; i++, j--) {
             System.out.println(i);
             System.out.println(j);
