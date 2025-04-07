@@ -3,7 +3,7 @@
  * 直接调用方法，没有参数传递，但是有返回值
  */
 
-public class 字符串长度读取 {
+public class length字符串长度读取 {
     public static void main(String[] args) {
         String data = "Ab"; // 推荐
 
