@@ -16,7 +16,7 @@ public class Main {
         // 调用实例化对象的方法
         class1.return_void("无返回值的函数");
 
-        // 同名函数，该函数可以不传入参数
-        class1.return_void();
+        // 同名函数，该函数可以传入整形参数
+        class1.return_void(111);
     }
 }

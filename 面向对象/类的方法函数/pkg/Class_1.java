@@ -18,8 +18,8 @@ public class Class_1 {
         System.out.println("这是一个无返回值的函数");
     }
 
-    // 同名函数，该函数可以不传入参数
-    public void return_void() {
-        System.out.println("同名函数，该函数可以不传入参数");
+    // 同名函数，该函数可以传入整形参数
+    public void return_void(int value) {
+        System.out.println("同名函数，该函数可以传入值" + value);
     }
 }
